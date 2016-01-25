@@ -19,21 +19,35 @@
             <asp:RoleGroup Roles="Klient">
             <ContentTemplate>
                 <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" 
-            AutoGenerateColumns="False" DataKeyNames="ID_Rezerwacji">
+            AutoGenerateColumns="False" DataKeyNames="ID_Rezerwacji" BackColor="White" 
+                 BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" 
+                 ForeColor="Black" GridLines="Horizontal">
             <Columns>
                 <asp:BoundField DataField="ID_Rezerwacji" HeaderText="Numer rezerwacji" 
-                    InsertVisible="False" ReadOnly="True" SortExpression="ID_Rezerwacji" />
-                <asp:BoundField DataField="Czas_od" HeaderText="Czas od" 
-                    SortExpression="Czas_od" />
+                    InsertVisible="False" ReadOnly="True" SortExpression="ID_Rezerwacji" >
+                    <HeaderStyle Width="200px" />
+                    </asp:BoundField>
+                <asp:BoundField DataField="Czas_od" HeaderText="Czas od" SortExpression="Czas_od" >
+                    <HeaderStyle Width="200px" />
+                    </asp:BoundField>
                 <asp:BoundField DataField="Czas_do" HeaderText="Czas do" 
-                    SortExpression="Czas_do" />
+                    SortExpression="Czas_do" >
+                    <HeaderStyle Width="200px" />
+                    </asp:BoundField>
                 <asp:BoundField DataField="Status" HeaderText="Status" 
-                    SortExpression="Status" />
+                    SortExpression="Status" >
+                    <HeaderStyle Width="200px" />
+                    </asp:BoundField>
                 <asp:BoundField DataField="Komentarz" HeaderText="Komentarz" 
-                    SortExpression="Komentarz" />
+                    SortExpression="Komentarz" >
+                    <HeaderStyle Width="200px" />
+                    </asp:BoundField>
                 <asp:BoundField DataField="ID_Apartamentu" HeaderText="ID apartamentu" 
-                    SortExpression="ID_Apartamentu" />
+                    SortExpression="ID_Apartamentu" >
+                    <HeaderStyle Width="200px" />
+                    </asp:BoundField>
             </Columns>
+            <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
         </asp:GridView>
             </ContentTemplate>
             </asp:RoleGroup>
@@ -76,6 +90,4 @@
         </fieldset>
             
     
-    
-        
-</asp:Content>
+    </asp:Content>

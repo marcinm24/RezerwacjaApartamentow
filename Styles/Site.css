@@ -88,10 +88,11 @@ first child of the left and right table columns */
 
 .page
 {
-    width: 960px;
-    background-color: #fff;
-    margin: 20px auto 0px auto;
+    width: 1362px;
+    background-color: #FFFFFF;
+    margin: 0px auto 0px auto;
     border: 1px solid #496077;
+    height: 632px;
 }
 
 .header
@@ -99,19 +100,26 @@ first child of the left and right table columns */
     position: relative;
     margin: 0px;
     padding: 0px;
-    background: #4b6c9e;
     width: 100%;
+    top: 1px;
+    left: 0px;
+    height: 170px;
+    background-image: url('48606-beautiful-hotel-terrace-at-sunset-1366x768-world-wallpaper (1).jpg');
 }
 
 .header h1
 {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
     font-weight: 700;
     margin: 0px;
     padding: 0px 0px 0px 20px;
     color: #f9f9f9;
-    border: none;
-    line-height: 2em;
-    font-size: 2em;
+    line-height: 1em;
+    font-size: 3em;
+    font-family: Cambria;
+    top: inherit;
 }
 
 .main
@@ -144,8 +152,7 @@ first child of the left and right table columns */
 
 div.hideSkiplink
 {
-    background-color:#3a4f63;
-    width:100%;
+    width: 100%;
 }
 
 div.menu
@@ -249,7 +256,9 @@ div.accountInfo
     display: block;
     float: left;
     text-align: left;
-    width: auto;
+    width: 1109px;
+    height: 79px;
+    margin-top: 9px;
 }
 
 .loginDisplay
@@ -259,6 +268,7 @@ div.accountInfo
     text-align: right;
     padding: 10px;
     color: White;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .loginDisplay a:link

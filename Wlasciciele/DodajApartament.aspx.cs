@@ -18,8 +18,15 @@ public partial class DodajApartament : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         Session["ID"]=User.Identity.Name;
+        String query = "insert into Apartament(Opis,Lokalizacja,Adres,Ilość_miejsc,Login,Wyposazenie) values(@Opis,@Lokalizacja,@Adres,@Ilość_miejsc,@Login,@Wyposazenie)";
+        SqlCommand cmd = new SqlCommand(query, bazaAI);
+        cmd.Parameters.AddWithValue("@Opis",Opis.Text  );
+        cmd.Parameters.AddWithValue("@Lokalizacja", Lokalizacja.Text);
+        cmd.Parameters.AddWithValue("@Adres", Adres.Text);
+        cmd.Parameters.AddWithValue("@Ilość_miejsc", IloscMiejsc.Text );
+        cmd.Parameters.AddWithValue("@Login",Session["ID"] );
+        cmd.Parameters.AddWithValue("@Wyposazenie",  Wyposazenie.Text );
         bazaAI.Open();
-        SqlCommand cmd = new SqlCommand("insert into Apartament(Opis,Lokalizacja,Adres,Ilość_miejsc,Login,Wyposazenie) values('" + Opis.Text + "','" + Lokalizacja.Text + "','" + Adres.Text + "','" + IloscMiejsc.Text + "','" + Session["ID"].ToString() + "','" + Wyposazenie.Text + "')", bazaAI);
         cmd.ExecuteNonQuery();
         bazaAI.Close();
         Page.Response.Redirect(HttpContext.Current.Request.Url.ToString(), true);

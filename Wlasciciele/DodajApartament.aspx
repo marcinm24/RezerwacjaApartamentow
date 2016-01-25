@@ -22,6 +22,11 @@
     <p>
         <asp:Label ID="LokalizacjaLabel" runat="server" Text="Lokalizacja">Lokalizacja:</asp:Label>&nbsp&nbsp
         <asp:TextBox ID="Lokalizacja" runat="server" CssClass="textDA" Height="20px"></asp:TextBox>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
+            ErrorMessage="Niepoprawne znaki" ControlToValidate="Lokalizacja" 
+            ValidationExpression="[0-9a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ\\.,:;\s]*"></asp:RegularExpressionValidator>
+        <asp:RequiredFieldValidator
+            ID="RequiredFieldValidator1" runat="server" ErrorMessage="Można używać jedynie liter,cyfr oraz znaki , ." ControlToValidate="Lokalizacja"></asp:RequiredFieldValidator>
     </p>
     <p>
         <asp:Label ID="AdresLabel" runat="server" Text="Adres">Adres:</asp:Label>&nbsp&nbsp
